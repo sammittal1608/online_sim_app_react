@@ -1,0 +1,29 @@
+.server-selection {
+    margin-left: 250px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .server-selection h2 {
+    margin-bottom: 20px;
+  }
+  
+  .server-list button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .server-list button:hover {
+    background-color: #007BA7;
+  }
+  
+  .sms-selection {
+    margin-left: 250px;
+    padding: 20px;
+  }
+  

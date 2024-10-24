@@ -1,0 +1,22 @@
+.buy-number-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #27ae60;
+  }
+  

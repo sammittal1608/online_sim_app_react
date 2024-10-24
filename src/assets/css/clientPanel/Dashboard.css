@@ -1,0 +1,79 @@
+/* Sidebar styling */
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+  }
+  
+  .sidebar a {
+    padding: 15px;
+    text-align: left;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+  }
+  
+  .sidebar a:hover {
+    background-color: #575757;
+  }
+  
+  /* Dashboard container styling */
+  .dashboard-container {
+    margin-left: 250px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+  }
+  
+  .dashboard-header {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Card styling */
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .topup-btn {
+    display: inline-block;
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .topup-btn:hover {
+    background-color: #007BA7;
+  }
+  
+  .status-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+  
