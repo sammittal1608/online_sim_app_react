@@ -1,33 +1,42 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Sidebar from './components/Sidebar';
-import ReceiveSMS from './components/ReceiveSMS';
-import BuyNumber from './components/clientPanel/BuyNumber';
-import Dashboard from './components/clientPanel/Dashboard';
-import Wallet from './components/clientPanel/Wallet';
-import RefillBalance from './components/clientPanel/RefillBalance';
-import SMSHistory from './components/clientPanel/SMSHistory';
-import Login from './components/auth/Login';
-import Register from './components/auth/Register';
+import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import Sidebar from "./components/sidebar/sidebar";
+import Dashboard from './components/dashboard/dashboard';
+import BalanceTopUp from "./components/wallet/BalanceTopUp"; // Make sure this import path is correct
+import './App.css'; // CSS for the app
 
 const App = () => {
   return (
     <Router>
-      <div className="App">
-        <Sidebar />
-        <Routes>
-          <Route path="/receive-sms" element={<ReceiveSMS />} />
-          <Route path="/buy-number" element={<BuyNumber />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/wallet" element={<Wallet />} />
-          <Route path="/refill-balance" element={<RefillBalance />} />
-          <Route path="/sms-history" element={<SMSHistory />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-        </Routes>
+      <div className="app-container">
+        <SidebarWithNavigation />
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Navigate to="/dashboard" />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/referral" element={<div>Referral Program</div>} />
+            <Route path="/wallet" element={<BalanceTopUp />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );
+};
+
+const SidebarWithNavigation = () => {
+  const navigate = useNavigate(); // Use navigate to redirect
+
+  const handleMenuClick = (menu) => {
+    if (menu === 'wallet') {
+      navigate('/wallet'); // Navigate to the Wallet route
+    } else if (menu === 'dashboard') {
+      navigate('/dashboard'); // Navigate to the Dashboard route
+    } else if (menu === 'referral') {
+      navigate('/referral'); // Navigate to the Referral route
+    }
+  };
+
+  return <Sidebar onMenuClick={handleMenuClick} />;
 };
 
 export default App;

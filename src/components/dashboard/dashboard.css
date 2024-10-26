@@ -1,0 +1,140 @@
+/* Main Dashboard Container */
+.dashboard-container {
+    padding: 30px; /* Added more padding for a spacious feel */
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Brighter background for the container */
+    width: calc(100vw - 250px); /* Subtract sidebar width */
+    height: calc(100vh - 20px); /* Full height minus a little for padding */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow */
+    margin-left: 250px; /* Offset by sidebar width */
+    box-sizing: border-box; /* Include padding in width calculations */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+}
+
+/* Heading Styles */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5rem; /* Responsive font size */
+}
+
+/* Country List Styling */
+.country-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.country-item {
+    background-color: #f9f9f9; /* Light background for country items */
+    margin-bottom: 15px;
+    padding: 20px; /* More padding for a comfortable touch */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s; /* Added transition for a subtle effect */
+}
+
+.country-item:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+/* Country Header */
+.country-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem; /* Increased font size for emphasis */
+    color: #007bff; /* Blue theme for headers */
+    font-weight: bold;
+}
+
+.country-header:hover {
+    color: #0056b3; /* Darker blue on hover */
+    transition: color 0.3s;
+}
+
+/* Server List under each Country */
+.server-list {
+    list-style: none;
+    padding: 10px 0 0 0;
+    margin: 0;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.server-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 1rem;
+}
+
+.price {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .dashboard-container {
+        padding: 20px; /* Reduced padding for larger screens */
+        width: calc(100vw - 220px); /* Adjust for narrower sidebar */
+        margin-left: 220px; /* Adjust offset for narrower sidebar */
+    }
+
+    h2 {
+        font-size: 2.3rem; /* Adjusted font size for medium screens */
+    }
+
+    .country-header {
+        font-size: 1.3rem; /* Adjusted size for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 15px; /* Further reduced padding for tablets */
+        width: calc(100vw - 180px); /* Adjust for narrower sidebar */
+        margin-left: 180px; /* Adjust offset for narrower sidebar */
+        height: calc(100vh - 30px); /* Adjust height for tablets */
+    }
+
+    h2 {
+        font-size: 2rem; /* Slightly smaller heading on tablet */
+    }
+
+    .country-header {
+        font-size: 1.2rem; /* Adjusted size for smaller screens */
+    }
+
+    .server-item {
+        font-size: 0.9rem; /* Smaller font size on mobile */
+        padding: 6px; /* Consistent padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-container {
+        padding: 10px; /* Minimal padding for small mobile screens */
+        width: 100vw; /* Full width for mobile */
+        margin-left: 0; /* No margin on mobile */
+        height: auto; /* Adjust height based on content */
+        border-radius: 0; /* No border-radius for full-width mobile */
+    }
+
+    h2 {
+        font-size: 1.8rem; /* Smaller heading on mobile */
+    }
+
+    .country-item {
+        padding: 15px; /* Adjusted padding for mobile */
+    }
+
+    .server-item {  
+        font-size: 0.8rem; /* Even smaller font size on very small screens */
+        padding: 5px; /* Minimal padding */
+    }
+}

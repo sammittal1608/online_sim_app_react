@@ -1,0 +1,199 @@
+/* Center the entire component */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to start */
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem; /* Increased size for more impact */
+    color: #333; /* Darker text for better readability */
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem; /* A bit smaller for better hierarchy */
+    color: #007BFF; /* Blue for section headers */
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    margin: 0 10px;
+    padding: 12px 24px; /* Slightly larger padding */
+    font-size: 1.3rem; /* Increased font size for better readability */
+    border: none;
+    border-radius: 25px;
+    background-color: #007BFF; /* Match the blue theme from the image */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s; /* Added transform for button effect */
+}
+
+.tabs button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.top-up-section,
+.transaction-section {
+    background-color: #fff; /* Ensure sections are white */
+    border-radius: 15px; /* Made corners a bit rounder */
+    padding: 30px; /* Increased padding for spaciousness */
+    width: 100%; /* Make the section responsive */
+    margin: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Softer shadow for a deeper look */
+}
+
+.section {
+    margin-bottom: 25px; /* Increased spacing for better separation */
+}
+
+.section h3 {
+    font-size: 1.8rem; /* Increased heading size */
+    margin-bottom: 15px;
+    text-align: center;
+    color: #007BFF; /* Blue for section headers */
+}
+
+.section button {
+    margin: 5px;
+    padding: 12px 18px; /* Adjusted padding */
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 25px;
+    background-color: #007BFF; /* Blue for submit buttons */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.3s; /* Added box-shadow for depth */
+    width: 100%; /* Full width for the button */
+    text-align: center; /* Center text in button */
+}
+
+.section button:hover {
+    background-color: #0455ab; /* Darker green on hover */
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 4px 20px rgba(40, 167, 69, 0.3); /* Shadow effect */
+}
+
+.section button:active {
+    transform: scale(0.95); /* Slightly smaller on click */
+}
+
+.payment-method {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center the QR code */
+    margin-top: 20px;
+}
+
+.payment-method img {
+    width: 50%; /* QR code takes 50% of the container's width */
+    max-width: 300px; /* Limit maximum width */
+    height: auto;
+    margin: auto; /* Center the image */
+}
+
+/* New Styles for Transaction Table */
+.transaction-section {
+    background-color: #fff; /* Ensure section is white */
+    border-radius: 15px; /* Rounded corners for table section */
+    padding: 20px; /* Padding for table section */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+}
+
+.transaction-section h3 {
+    font-size: 1.8rem; /* Increased heading size */
+    margin-bottom: 15px;
+    text-align: center;
+    color: #007BFF; /* Blue for section headers */
+}
+
+.transaction-table {
+    width: 100%; /* Full width for the table */
+    border-collapse: collapse; /* Collapse borders for a cleaner look */
+}
+
+.transaction-table th,
+.transaction-table td {
+    padding: 12px; /* Spacing inside cells */
+    text-align: center; /* Centered text for all cells */
+    border: 1px solid #ddd; /* Light grey border */
+}
+
+.transaction-table th {
+    background-color: #007BFF; /* Header background color */
+    color: white; /* Header text color */
+    font-weight: bold; /* Bold text for header */
+}
+
+.transaction-table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Zebra striping for even rows */
+}
+
+.transaction-table tr:hover {
+    background-color: #e7f1ff; /* Light blue hover effect */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.transaction-table td.status {
+    color: orange; /* Status text color */
+    font-weight: bold; /* Bold for emphasis */
+}
+
+.transaction-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.transaction-section li {
+    display: none; /* Hide previous list items as we're using a table now */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .tabs button {
+        font-size: 1rem; /* Smaller button font size on mobile */
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .section button {
+        font-size: 1rem; /* Smaller button font size on mobile */
+        width: calc(50% - 10px); /* Two buttons per row on smaller screens */
+    }
+
+    .payment-method img {
+        width: 70%; /* Make QR code a bit larger on mobile */
+    }
+
+    .transaction-table th,
+    .transaction-table td {
+        font-size: 0.9rem; /* Smaller font size for table cells on mobile */
+    }
+}
+
+.amount-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px; /* Adds some space above the input */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for inputs */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+.amount-input:focus {
+    border-color: #5b6a7b; /* Blue border on focus */
+    outline: none; /* Remove default outline */
+}
